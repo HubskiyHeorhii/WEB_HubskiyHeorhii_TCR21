@@ -3,11 +3,11 @@ li:first-child {
 }
 
 a:last-child {
-    color: red;
+    color: rgb(244, 3, 3);
 }
 
 input:disabled {
-    background-color: gray;
+    background-color: rgb(115, 115, 115);
 }
 
 div > p {
@@ -15,11 +15,11 @@ div > p {
 }
 
 *[href^="https"] {
-    color: green;
+    color: rgb(2, 106, 2);
 }
 
 input[type="text"] {
-    border: 1px solid blue;
+    border: 1px solid rgb(10, 10, 253);
 }
 
 li:first-child,
@@ -32,7 +32,7 @@ div p {
 }
 
 input:checked {
-    background-color: lightblue;
+    background-color: rgb(167, 214, 229);
 }
 
 li > a {
@@ -44,7 +44,7 @@ li:nth-child(even) {
 }
 
 input[type="text"]:not([disabled]) {
-    background-color: #dcdcdc;
+    background-color: #c6c4c4a7;
 }
 
 p:first-child {
@@ -56,6 +56,7 @@ p:first-child {
 }
 
 p::first-letter {
+    text-decoration: underline;
     font-size: 36px;
 }
 
