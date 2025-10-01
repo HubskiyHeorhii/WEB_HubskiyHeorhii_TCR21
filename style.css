@@ -167,6 +167,8 @@ footer a:hover {
     font-size: 14px;
     background-color: #ffffff;
     color: #2a5d2a;
+    height: 40 px;
+    box-sizing: border-box;
 }
 
 .lab-1 form input:focus,

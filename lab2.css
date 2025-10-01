@@ -7,15 +7,15 @@ a:last-child {
 }
 
 input:disabled {
-    background-color: rgb(115, 115, 115);
+    accent-color: rgb(115, 115, 115);
 }
 
 div > p {
     font-weight: bold;
 }
 
-*[href^="https"] {
-    color: rgb(2, 106, 2);
+a[href^="https"] {
+    color: rgb(0, 128, 0);
 }
 
 input[type="text"] {
@@ -32,7 +32,7 @@ div p {
 }
 
 input:checked {
-    background-color: rgb(167, 214, 229);
+    accent-color: rgb(167, 214, 229);
 }
 
 li > a {
