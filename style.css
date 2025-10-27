@@ -202,8 +202,10 @@ footer a:hover {
   background: linear-gradient(to bottom, #ffffff 0%, #e0f7e9 100%);
   color: #2a5d2a;
   line-height: 1.6;
+  min-height: 100vh;
 }
 
+/* Верхній бар */
 .pract-3 .header {
   display: flex;
   justify-content: space-between;
@@ -218,17 +220,19 @@ footer a:hover {
   font-weight: bold;
 }
 
+/* Пошук */
 .pract-3 .search {
   display: flex;
   flex: 1;
-  margin: 0 20px;
+  margin: 0 15px;
+  padding: 0 20px;
 }
 
 .pract-3 .search input {
   flex: 1;
   padding: 8px;
   border: 1px solid #81c784;
-  border-radius: 5px 0 0 5px;
+  border-radius: 10px 0 0 10px;
 }
 
 .pract-3 .search button {
@@ -237,23 +241,51 @@ footer a:hover {
   background-color: #388e3c;
   color: white;
   cursor: pointer;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 10px 10px 0;
+  transition: background 0.3s;
 }
 
 .pract-3 .search button:hover {
   background-color: #1b5e20;
 }
 
-.pract-3 .icons span {
-  margin-left: 15px;
+.pract-3 .mic {
+  background: #a5d6a7;
+  border-radius: 50%;
+  padding: 8px;
+  margin-left: 5px;
   font-size: 18px;
   cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
 }
 
+.pract-3 .mic:hover {
+  background: #81c784;
+}
+
+/* Іконки праворуч */
+.pract-3 .icons1 span {
+  background: #a5d6a7;
+  border-radius: 50%;
+  padding: 8px;
+  margin-left: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pract-3 .icons1 span:hover {
+  background: #81c784;
+}
+
+/* Загальна сітка */
 .pract-3 .container {
   display: flex;
 }
 
+/* Бокове меню */
 .pract-3 .sidebar {
   width: 200px;
   background-color: #c8e6c9;
@@ -265,16 +297,46 @@ footer a:hover {
 }
 
 .pract-3 .sidebar ul li {
-  margin: 15px 0;
-  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  font-size: 16px;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: background 0.3s;
 }
 
 .pract-3 .sidebar ul li:hover {
-  color: #1b5e20;
+  background: #81c784;
 }
 
+/* Фільтри (категорії) */
+.pract-3 .filters {
+  display: flex;
+  gap: 10px;
+  padding: 15px 20px;
+  overflow-x: auto;
+  background: #ffffff;
+  border-top: 1px solid #c8e6c9;
+  border-bottom: 1px solid #c8e6c9;
+}
+
+.pract-3 .filters button {
+  padding: 6px 16px;
+  background: #a5d6a7;
+  color: #1b5e20;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s;
+}
+
+.pract-3 .filters button:hover,
+.pract-3 .filters button.active {
+  background: #81c784;
+}
+
+/* Контент (відео) */
 .pract-3 .content {
   display: flex;
   flex-wrap: wrap;
@@ -286,7 +348,7 @@ footer a:hover {
 .pract-3 .video {
   background: #a5d6a7;
   height: 150px;
-  flex: 1 1 calc(33% - 20px);
+  flex: 1 1 calc(33.333% - 20px);
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -316,4 +378,307 @@ footer a:hover {
 
 .pract-3 footer a:hover {
   color: #c8e6c9;
+}
+.keyboard-container-full {
+    font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #5a5a5a;
+    border-radius: 10px;
+    border: 3px solid #333;
+    box-shadow: 0 10px 0 #333, 0 12px 15px rgba(0,0,0,0.4);
+
+    display: grid;
+    grid-template-columns: 3.5fr 1fr 1fr;
+    gap: 25px;
+}
+
+.k-block-main {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.k-block-middle {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.k-block-numpad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.k-row {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.k-row-middle-1, .k-row-middle-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.k-row-middle-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 8px;
+    grid-template-areas:
+        ". up ."
+        "left down right";
+    margin-top: auto;
+}
+
+.k-row-middle-3 .key:nth-child(1) { grid-area: up; }
+.k-row-middle-3 .key:nth-child(2) { grid-area: left; }
+.k-row-middle-3 .key:nth-child(3) { grid-area: down; }
+.k-row-middle-3 .key:nth-child(4) { grid-area: right; }
+
+.k-spacer-s { flex-grow: 0.5; }
+.k-spacer-xs { flex-grow: 0.25; }
+
+.key {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    
+    box-shadow: 0 4px 0 #b3b3b3, 0 5px 2px rgba(0,0,0,0.2);
+
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 40px;
+}
+
+.key:hover {
+    background-color: #fff;
+    color: #000;
+}
+.key:active {
+    box-shadow: 0 1px 0 #b3b3b3;
+    transform: translateY(3px);
+}
+
+.key.k-spec {
+    background-color: #e0e0e0;
+    color: #444;
+    font-size: 12px;
+}
+
+.k-wide-1-25 { flex-grow: 1.25; }
+.k-wide-1-5  { flex-grow: 1.5; }
+.k-wide-1-75 { flex-grow: 1.75; }
+.k-wide-2   { flex-grow: 2; }
+.k-wide-2-25 { flex-grow: 2.25; }
+.k-wide-2-75 { flex-grow: 2.75; }
+.k-wide-6-5  { flex-grow: 6.5; }
+
+.k-numpad-plus {
+    grid-row: span 2;
+    height: 100%;
+}
+
+.k-numpad-enter {
+    grid-row: span 2;
+    height: 100%;
+}
+
+.k-numpad-zero {
+    grid-column: span 2;
+}
+
+.planner-container {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.planner-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 2px solid #ccc;
+    gap: 15px;
+}
+
+.planner-header h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #000;
+    flex-grow: 1;
+}
+
+.planner-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.planner-field label, .planner-options label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase;
+}
+
+.planner-options {
+    display: flex;
+    gap: 15px;
+}
+
+.planner-options div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.editable-field {
+    border-bottom: 1.5px solid #aaa;
+    min-width: 150px;
+    padding: 2px 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.editable-field:focus {
+    border-color: #4caf50;
+}
+
+.planner-grid {
+    display: grid;
+    grid-template-columns: 30% 70%; 
+    min-height: 70vh;
+}
+
+.planner-sidebar {
+    padding: 15px;
+    border-right: 2px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.planner-sidebar h3 {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.task-list .task {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.task-list .task [contenteditable="true"] {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    min-height: 1.2em;
+    padding-left: 2px;
+}
+
+.task-list .task [contenteditable="true"]:focus {
+    border-bottom: 1px solid #4caf50;
+    outline: none;
+}
+
+.planner-days {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.day-cell {
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.day-cell:nth-child(4), .day-cell:nth-child(7) {
+    border-left: none;
+}
+
+.day-cell h4 {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.day-cell h4 label {
+    cursor: pointer;
+}
+
+.day-cell.day-sunday {
+    grid-column: 3;
+    border-top: 1px solid #ccc;
+}
+
+.editable-day {
+    flex-grow: 1;
+    outline: none;
+    min-height: 100px;
+}
+
+.editable-day:focus {
+    background: #fcfcfc;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 22px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 16px;
+}
+
+input[type="checkbox"] + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid #aaa;
+    background: #fff;
+    border-radius: 2px;
+}
+
+input[type="checkbox"]:checked + label::after {
+    content: '✔';
+    position: absolute;
+    left: 2px;
+    top: 0px;
+    color: #388e3c;
+    font-weight: bold;
+    font-size: 14px;
 }
