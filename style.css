@@ -264,7 +264,6 @@ footer a:hover {
   background: #81c784;
 }
 
-/* Іконки праворуч */
 .pract-3 .icons1 span {
   background: #a5d6a7;
   border-radius: 50%;
@@ -279,17 +278,15 @@ footer a:hover {
   background: #81c784;
 }
 
-/* Загальна сітка */
 .pract-3 .container {
-  display: flex; /* (sidebar | main-container) */
+  display: flex;
 }
 
-/* Бокове меню */
 .pract-3 .sidebar {
-  width: 200px; /* Зробив трохи вужчим для економії місця */
+  width: 200px;
   background-color: #c8e6c9;
   padding: 20px;
-  flex-shrink: 0; /* Забороняємо сайдбару стискатися */
+  flex-shrink: 0;
 }
 
 .pract-3 .sidebar ul {
@@ -309,16 +306,50 @@ footer a:hover {
   background: #81c784;
 }
 
-/* ⭐ НОВИЙ ГОЛОВНИЙ КОНТЕЙНЕР ⭐ */
-/* Цей блок обгортає фільтри і контент */
-.pract-3 .main-container {
-  flex: 1; /* Займає весь простір, що залишився */
-  display: flex;
-  flex-direction: column; /* (filters / content) - стеком */
-  overflow-x: hidden; /* Ховаємо горизонтальний скрол */
+.pract-3 .sidebar-divider {
+  border: none;
+  height: 1px;
+  background-color: #a5d6a7;
+  margin: 10px 0;
 }
 
-/* Фільтри (категорії) */
+.pract-3 .sidebar-heading {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1b5e20;
+  padding: 8px 12px;
+  margin-top: 10px;
+}
+
+.pract-3 .channel-item {
+  display: flex;
+  align-items: center;
+}
+
+.pract-3 .channel-avatar-small {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #81c784;
+  margin-right: 15px;
+}
+
+.pract-3 .sidebar ul li {
+  border-radius: 5px;
+  padding: 10px 12px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pract-3 .main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
 .pract-3 .filters {
   display: flex;
   gap: 10px;
@@ -326,7 +357,7 @@ footer a:hover {
   overflow-x: auto;
   background: #ffffff;
   border-bottom: 1px solid #c8e6c9;
-  flex-shrink: 0; /* Фільтри не стискаються */
+  flex-shrink: 0;
 }
 
 .pract-3 .filters button {
@@ -345,37 +376,31 @@ footer a:hover {
   background: #81c784;
 }
 
-/* Контент (відео) */
 .pract-3 .content {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Трохи збільшив відступ */
+  gap: 20px;
   padding: 20px;
   flex: 1;
-  overflow-y: auto; /* Додаємо скрол, якщо відео багато */
+  overflow-y: auto;
 }
 
-/* ⭐ ПОВНІСТЮ ОНОВЛЕНІ СТИЛІ ВІДЕО ⭐ */
-
-/* 1. Загальний блок .video */
 .pract-3 .video {
-  /* Забираємо старі стилі (фон, висоту, flex-center) */
   background: transparent;
-  flex: 1 1 calc(33.333% - 20px); /* 3 відео в ряд */
-  min-width: 250px; /* Мінімальна ширина для адаптивності */
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 250px; 
   cursor: pointer;
   display: flex;
-  flex-direction: column; /* (thumbnail / video-info) */
+  flex-direction: column;
 }
 
-/* 2. Блок "плеєра" (картинка) */
 .pract-3 .thumbnail {
   background: #a5d6a7;
   width: 100%;
-  padding-top: 56.25%; /* Співвідношення сторін 16:9 */
+  padding-top: 56.25%;
   border-radius: 10px;
   margin-bottom: 12px;
-  position: relative; /* Для центрування тексту */
+  position: relative;
   transition: background 0.3s;
 }
 .pract-3 .thumbnail span {
@@ -387,26 +412,23 @@ footer a:hover {
   color: #1b5e20;
 }
 .pract-3 .video:hover .thumbnail {
-  background: #81c784; /* Ефект при наведенні */
+  background: #81c784;
 }
 
-/* 3. Блок інформації під відео */
 .pract-3 .video-info {
   display: flex;
-  gap: 12px; /* Відступ між аватаром і текстом */
+  gap: 12px;
   align-items: flex-start;
 }
 
-/* 4. Аватар каналу */
 .pract-3 .channel-avatar {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #81c784; /* Колір-заглушка для аватара */
+  background: #81c784;
   flex-shrink: 0;
 }
 
-/* 5. Деталі відео (текст) */
 .pract-3 .video-details {
   display: flex;
   flex-direction: column;
@@ -430,7 +452,6 @@ footer a:hover {
   font-size: 13px;
   color: #388e3c;
 }
-/* ⭐ Кінець оновлених стилів ⭐ */
 
 
 .pract-3 footer {
