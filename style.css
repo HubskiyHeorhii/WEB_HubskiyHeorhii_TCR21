@@ -774,3 +774,140 @@ input[type="checkbox"]:checked + label::after {
     font-weight: bold;
     font-size: 14px;
 }
+
+.pract-5-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #f0fdf4; /* Легкий зелений фон */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.pract-5-profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Кругле фото */
+    overflow: hidden;
+    margin: 0 auto 20px auto; /* Центрування та відступ */
+    border: 5px solid #81c784; /* Зелена рамка */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.pract-5-profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pract-5-projects {
+    padding-top: 20px;
+}
+
+.pract-5-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.pract-5-projects .buttons {
+    text-align: center
+}
+
+.pract-5-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #c8e6c9; 
+    transition: transform 0.2s ease-in-out;
+}
+
+.pract-5-item:hover {
+    transform: translateY(-5px);
+}
+
+.pract-5-item:last-child {
+    border-bottom: none;
+}
+
+.pract-5-image-container { 
+    width: 250px;
+    height: 150px;
+    margin-right: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0; 
+}
+
+.pract-5-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pract-5-details {
+    flex-grow: 1;
+}
+
+.pract-5-details h4 {
+    color: #2e7d32; 
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.pract-5-details a {
+    text-decoration: none;
+    color: #2e7d32;
+    transition: color 0.3s;
+}
+
+.pract-5-details a:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+}
+
+.pract-5-meta {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.pract-5-meta .year {
+    font-weight: bold;
+    background-color: #388e3c;
+    color: white;
+    padding: 3px 8px; 
+    border-radius: 5px; 
+    margin-right: 8px; 
+    display: inline-block;
+}
+
+.pract-5-meta .tag {
+    color: #4caf50;
+    font-style: italic;
+}
+
+.pract-5-button-other {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #388e3c; 
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.pract-5-button-other:hover {
+    background-color: #1b5e20;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
