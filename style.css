@@ -585,12 +585,12 @@ footer a:hover {
 
 .k-numpad-plus {
     grid-row: span 2;
-    height: 100%;
+    height: 100px;
 }
 
 .k-numpad-enter {
     grid-row: span 2;
-    height: 100%;
+    height: 100px;
 }
 
 .k-numpad-zero {
@@ -778,7 +778,7 @@ input[type="checkbox"]:checked + label::after {
 .pract-5-intro {
     text-align: center;
     margin-bottom: 40px;
-    background-color: #f0fdf4; /* Легкий зелений фон */
+    background-color: #f0fdf4;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -787,10 +787,10 @@ input[type="checkbox"]:checked + label::after {
 .pract-5-profile-pic {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Кругле фото */
+    border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto 20px auto; /* Центрування та відступ */
-    border: 5px solid #81c784; /* Зелена рамка */
+    margin: 0 auto 20px auto;
+    border: 5px solid #81c784;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
@@ -910,4 +910,84 @@ input[type="checkbox"]:checked + label::after {
 .pract-5-button-other:hover {
     background-color: #1b5e20;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.pract-6-description {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pract-6-scene {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background: transparent; 
+    filter: none;
+    animation: none;
+}
+
+.pract-6-scene::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    
+    background: radial-gradient(circle at 50% 100%, #1b401b, #0f260f, #000000); 
+    filter: brightness(1) hue-rotate(0deg); 
+    animation: bgPulse 3s infinite alternate, rainbowGlow 10s infinite alternate; 
+}
+
+.evo-container {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+}
+
+.evo-stage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    animation: evoCycle 9s infinite, greenTint 6s infinite alternate; 
+}
+
+.stage1 { background-image: url('larvitar.avif'); animation-delay: 0s; }
+.stage2 { background-image: url('pupitar.avif'); animation-delay: 3s; }
+.stage3 { background-image: url('tyranitar.avif'); animation-delay: 6s; }
+
+@keyframes evoCycle {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes greenTint {
+    0% { filter: hue-rotate(0deg) brightness(1); }
+    50% { filter: hue-rotate(25deg) brightness(1.15); }
+    100% { filter: hue-rotate(-25deg) brightness(1); }
+}
+
+@keyframes rainbowGlow {
+    0% { filter: hue-rotate(0deg) brightness(1); }
+    33% { filter: hue-rotate(120deg) brightness(1.4); }
+    66% { filter: hue-rotate(240deg) brightness(1.1); }
+    100% { filter: hue-rotate(360deg) brightness(1); }
+}
+
+@keyframes bgPulse {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
