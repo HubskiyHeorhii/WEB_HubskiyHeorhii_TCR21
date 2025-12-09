@@ -1,0 +1,95 @@
+@use 'fragments' as *;
+@use 'sass:color';
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-dark-bg;
+    padding: $spacing-m;
+    box-sizing: border-box;
+}
+
+.card {
+    position: relative;
+    max-width: 900px;
+    width: 95%;
+    min-height: 500px;
+    border-radius: $spacing-m;
+    overflow: hidden;
+    box-shadow: 0 15px 30px $color-shadow;
+}
+
+.card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    padding: $spacing-l;
+    color: $color-primary;
+    font-family: $font-family-primary;
+}
+
+.card__title {
+    font-family: $font-family-header;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    text-shadow: 3px 3px 5px $color-shadow;
+    margin-bottom: $spacing-s;
+
+    &--snow-style {
+        color: white; 
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px $color-primary;
+    }
+}
+
+.card__text {
+    font-size: 1.5rem;
+    margin-bottom: $spacing-l;
+    max-width: 600px;
+}
+
+.button {
+    padding: $spacing-s $spacing-l;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;
+
+    &--accent {
+        background-color: $color-accent;
+        color: $color-primary;
+    }
+
+    &:hover {
+    background-color: color.adjust($color-accent, $lightness: -10%); 
+    transform: translateY(-2px);
+}
+}
