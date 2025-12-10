@@ -991,3 +991,259 @@ input[type="checkbox"]:checked + label::after {
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
 }
+
+.main-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 15px; /* Забезпечення відступу на мобільних */
+}
+
+/* 2. Секція Intro */
+.profile-intro {
+    display: flex;
+    flex-direction: row-reverse; /* Зображення справа */
+    align-items: center;
+    padding: 60px 0 70px;
+    gap: 50px;
+    text-align: left;
+}
+
+.intro-text {
+    flex-grow: 1;
+}
+
+.profile-pic-container {
+    flex-shrink: 0;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.profile-pic-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-intro h1 {
+    font-size: 44px; /* Великий заголовок */
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.intro-profession {
+    font-weight: 500;
+}
+
+.intro-description {
+    margin-bottom: 30px;
+}
+
+.btn-download-cv {
+    margin: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #388e3c;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-download-cv:hover {
+    background-color: #1b5e20;
+}
+
+
+/* 3. Recent Posts */
+.recent-posts {
+    background-color: var(--light-bg);
+    padding: 30px 15px;
+    margin-bottom: 30px;
+}
+
+.recent-posts h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-left: 15px; /* Відступ від краю сірого блоку */
+    display: inline-block;
+}
+
+.view-all-link {
+    float: right;
+    color: #00A8CC; /* Колір посилання */
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 5px;
+    padding-right: 15px;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.post-item {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.post-item h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 16px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.post-excerpt {
+    font-size: 16px;
+}
+
+/* 4. Featured Works */
+.featured-works {
+    padding: 30px 0;
+}
+
+.featured-works h3 {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.work-item {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.work-image-container {
+    width: 246px; /* Ширина зображення у макеті */
+    height: 180px;
+    flex-shrink: 0;
+    margin-right: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.work-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work-details h4 {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.work-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.year-label {
+    font-weight: 700;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2px 8px;
+    border-radius: 16px; /* Закруглені краї, як у прикладі */
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.tag-label {
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
+.work-description {
+    font-size: 16px;
+}
+
+/* 5. Футер */
+.site-footer {
+    padding: 50px 0;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 24px;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.social-links {
+    margin-bottom: 25px;
+}
+
+.copyright {
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+/* МЕДІА-ЗАПИТИ для адаптивності */
+@media (max-width: 768px) {
+    .site-header {
+        justify-content: center; /* На мобільних центруюємо навігацію */
+    }
+
+    .profile-intro {
+        flex-direction: column; /* На мобільних стовпчиком */
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .profile-pic-container {
+        order: -1; /* Зображення на мобільних зверху */
+    }
+    
+    .profile-intro h1 {
+        font-size: 32px;
+    }
+    
+    .posts-grid {
+        grid-template-columns: 1fr; /* Один стовпчик на мобільних */
+    }
+
+    .work-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .work-image-container {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .work-details h4 {
+        font-size: 26px;
+    }
+}
