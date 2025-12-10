@@ -1068,13 +1068,13 @@ input[type="checkbox"]:checked + label::after {
 .recent-posts h3 {
     font-size: 22px;
     margin-bottom: 20px;
-    padding-left: 15px; /* Відступ від краю сірого блоку */
+    padding-left: 15px;
     display: inline-block;
 }
 
 .view-all-link {
     float: right;
-    color: #00A8CC; /* Колір посилання */
+    color: #00A8CC;
     font-size: 16px;
     font-weight: 400;
     margin-top: 5px;
@@ -1135,7 +1135,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .work-image-container {
-    width: 246px; /* Ширина зображення у макеті */
+    width: 246px;
     height: 180px;
     flex-shrink: 0;
     margin-right: 20px;
@@ -1168,7 +1168,7 @@ input[type="checkbox"]:checked + label::after {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 2px 8px;
-    border-radius: 16px; /* Закруглені краї, як у прикладі */
+    border-radius: 16px;
     margin-right: 15px;
     font-size: 16px;
 }
@@ -1182,7 +1182,6 @@ input[type="checkbox"]:checked + label::after {
     font-size: 16px;
 }
 
-/* 5. Футер */
 .site-footer {
     padding: 50px 0;
     text-align: center;
@@ -1204,46 +1203,4 @@ input[type="checkbox"]:checked + label::after {
 .copyright {
     font-size: 14px;
     color: var(--secondary-color);
-}
-
-/* МЕДІА-ЗАПИТИ для адаптивності */
-@media (max-width: 768px) {
-    .site-header {
-        justify-content: center; /* На мобільних центруюємо навігацію */
-    }
-
-    .profile-intro {
-        flex-direction: column; /* На мобільних стовпчиком */
-        text-align: center;
-        padding-top: 30px;
-    }
-
-    .profile-pic-container {
-        order: -1; /* Зображення на мобільних зверху */
-    }
-    
-    .profile-intro h1 {
-        font-size: 32px;
-    }
-    
-    .posts-grid {
-        grid-template-columns: 1fr; /* Один стовпчик на мобільних */
-    }
-
-    .work-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .work-image-container {
-        width: 100%;
-        height: auto;
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-    
-    .work-details h4 {
-        font-size: 26px;
-    }
 }
